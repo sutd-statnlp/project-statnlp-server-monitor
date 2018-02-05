@@ -1,7 +1,7 @@
 **/*.coverprofile
 **/*.test
 vendor
-
+build/
 # Executables and test outputs
 goagen/goagen
 _integration_tests/*/**/*.*
