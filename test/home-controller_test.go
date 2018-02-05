@@ -6,12 +6,11 @@ import (
 	"testing"
 
 	"../controller"
-	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
 )
 
 func TestIndex(t *testing.T) {
-	router := gin.Default()
+	router := SetUpRouter()
 
 	homeController := controller.HomeController{}
 	homeController.InitRoutes(router)
@@ -20,5 +19,5 @@ func TestIndex(t *testing.T) {
 	req, _ := http.NewRequest("GET", "/", nil)
 	router.ServeHTTP(w, req)
 
-	assert.Equal(t, 404, w.Code)
+	assert.Equal(t, 200, w.Code)
 }
