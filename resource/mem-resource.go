@@ -23,4 +23,13 @@ func (memResource MemResource) InitRoutes(router *gin.Engine) {
 		}
 	})
 
+	router.GET("/api/mem/swap", func(context *gin.Context) {
+		body, err := memService.GetSwapMemory()
+		if err == nil {
+			context.JSON(200, body)
+		} else {
+			context.Error(err)
+		}
+	})
+
 }

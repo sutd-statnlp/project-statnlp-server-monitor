@@ -12,3 +12,8 @@ type MemService struct {
 func (memService MemService) GetVirtualMemory() (*mem.VirtualMemoryStat, error) {
 	return mem.VirtualMemory()
 }
+
+// GetSwapMemory .
+func (memService MemService) GetSwapMemory() (*mem.SwapMemoryStat, error) {
+	return mem.SwapMemory()
+}

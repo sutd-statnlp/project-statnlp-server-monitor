@@ -12,3 +12,8 @@ type HostService struct {
 func (hostService HostService) GetInfo() (*host.InfoStat, error) {
 	return host.Info()
 }
+
+// GetTemperature .
+func (hostService HostService) GetTemperature() ([]host.TemperatureStat, error) {
+	return host.SensorsTemperatures()
+}

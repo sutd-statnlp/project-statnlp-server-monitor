@@ -23,4 +23,12 @@ func (hostResource HostResource) InitRoutes(router *gin.Engine) {
 		}
 	})
 
+	router.GET("/api/host/temperature", func(context *gin.Context) {
+		body, err := hostService.GetTemperature()
+		if err == nil {
+			context.JSON(200, body)
+		} else {
+			context.Error(err)
+		}
+	})
 }

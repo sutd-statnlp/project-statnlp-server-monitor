@@ -14,7 +14,7 @@ type NetResource struct {
 func (netResource NetResource) InitRoutes(router *gin.Engine) {
 	netService := service.NetService{}
 
-	router.GET("/api/net/interfaces", func(context *gin.Context) {
+	router.GET("/api/net/interface", func(context *gin.Context) {
 		body, err := netService.GetInterfaces()
 		if err == nil {
 			context.JSON(200, body)
@@ -23,4 +23,12 @@ func (netResource NetResource) InitRoutes(router *gin.Engine) {
 		}
 	})
 
+	router.GET("/api/net/connection", func(context *gin.Context) {
+		body, err := netService.GetConnections()
+		if err == nil {
+			context.JSON(200, body)
+		} else {
+			context.Error(err)
+		}
+	})
 }

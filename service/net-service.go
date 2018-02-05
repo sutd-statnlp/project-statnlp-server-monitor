@@ -12,3 +12,8 @@ type NetService struct {
 func (netService NetService) GetInterfaces() ([]net.InterfaceStat, error) {
 	return net.Interfaces()
 }
+
+// GetConnections .
+func (netService NetService) GetConnections() ([]net.ConnectionStat, error) {
+	return net.Connections("")
+}
