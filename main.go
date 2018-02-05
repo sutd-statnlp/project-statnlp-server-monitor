@@ -16,6 +16,12 @@ func main() {
 func setupRoutes() *gin.Engine {
 	router := gin.Default()
 
+	router.Use(func(context *gin.Context) {
+		// add header Access-Control-Allow-Origin
+		context.Writer.Header().Add("Access-Control-Allow-Origin", "*")
+		context.Next()
+	})
+
 	homeController := controller.HomeController{}
 	homeController.InitRoutes(router)
 
