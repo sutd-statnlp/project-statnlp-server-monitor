@@ -24,3 +24,19 @@ func TestGetVirtual(t *testing.T) {
 	assert.True(t, true, w.Body.Len() > 0)
 
 }
+
+func TestGetSwap(t *testing.T) {
+	router := SetUpRouter()
+
+	memResource := resource.MemResource{}
+	memResource.InitRoutes(router)
+
+	// Get mem swap
+	w := httptest.NewRecorder()
+	req, _ := http.NewRequest("GET", "/api/mem/swap", nil)
+	router.ServeHTTP(w, req)
+
+	assert.Equal(t, 200, w.Code)
+	assert.True(t, true, w.Body.Len() > 0)
+
+}

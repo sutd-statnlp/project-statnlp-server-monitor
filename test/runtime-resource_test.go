@@ -15,7 +15,7 @@ func TestGetGoOS(t *testing.T) {
 	runtimeResource := resource.RuntimeResource{}
 	runtimeResource.InitRoutes(router)
 
-	// Get runtime info
+	// Get runtime go OS
 	w := httptest.NewRecorder()
 	req, _ := http.NewRequest("GET", "/api/runtime/goos", nil)
 	router.ServeHTTP(w, req)

@@ -24,3 +24,19 @@ func TestGetHostInfo(t *testing.T) {
 	assert.True(t, true, w.Body.Len() > 0)
 
 }
+
+func TestGetHostTemperture(t *testing.T) {
+	router := SetUpRouter()
+
+	hostResource := resource.HostResource{}
+	hostResource.InitRoutes(router)
+
+	// Get host temperature
+	w := httptest.NewRecorder()
+	req, _ := http.NewRequest("GET", "/api/host/temperature", nil)
+	router.ServeHTTP(w, req)
+
+	assert.Equal(t, 200, w.Code)
+	assert.True(t, true, w.Body.Len() > 0)
+
+}

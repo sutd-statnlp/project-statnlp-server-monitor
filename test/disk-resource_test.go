@@ -15,7 +15,7 @@ func TestGetUsage(t *testing.T) {
 	diskResource := resource.DiskResource{}
 	diskResource.InitRoutes(router)
 
-	// Get disk info
+	// Get disk usage
 	w := httptest.NewRecorder()
 	req, _ := http.NewRequest("GET", "/api/disk/usage", nil)
 	router.ServeHTTP(w, req)

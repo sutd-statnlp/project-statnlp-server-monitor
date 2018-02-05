@@ -15,7 +15,7 @@ func TestGetAverage(t *testing.T) {
 	loadResource := resource.LoadResource{}
 	loadResource.InitRoutes(router)
 
-	// Get load info
+	// Get load average
 	w := httptest.NewRecorder()
 	req, _ := http.NewRequest("GET", "/api/load/average", nil)
 	router.ServeHTTP(w, req)
@@ -31,7 +31,7 @@ func TestGetMisc(t *testing.T) {
 	loadResource := resource.LoadResource{}
 	loadResource.InitRoutes(router)
 
-	// Get load info
+	// Get load misc
 	w := httptest.NewRecorder()
 	req, _ := http.NewRequest("GET", "/api/load/misc", nil)
 	router.ServeHTTP(w, req)
