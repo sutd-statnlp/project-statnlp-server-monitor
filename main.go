@@ -10,7 +10,7 @@ import (
 func main() {
 	router := setupRoutes()
 
-	router.Run(":8080")
+	router.Run(":8210")
 }
 
 func setupRoutes() *gin.Engine {
