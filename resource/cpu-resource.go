@@ -19,7 +19,7 @@ func (cpuResource CPUResource) InitRoutes(router *gin.Engine) {
 		if err == nil {
 			context.JSON(200, body)
 		} else {
-			context.Error(err)
+			context.String(400, err.Error())
 		}
 	})
 
@@ -28,7 +28,7 @@ func (cpuResource CPUResource) InitRoutes(router *gin.Engine) {
 		if err == nil {
 			context.JSON(200, body)
 		} else {
-			context.Error(err)
+			context.String(400, err.Error())
 		}
 	})
 
@@ -37,7 +37,7 @@ func (cpuResource CPUResource) InitRoutes(router *gin.Engine) {
 		if err == nil {
 			context.JSON(200, body)
 		} else {
-			context.Error(err)
+			context.String(400, err.Error())
 		}
 	})
 
@@ -46,7 +46,7 @@ func (cpuResource CPUResource) InitRoutes(router *gin.Engine) {
 		if err == nil {
 			context.JSON(200, body)
 		} else {
-			context.Error(err)
+			context.String(400, err.Error())
 		}
 	})
 
@@ -55,7 +55,7 @@ func (cpuResource CPUResource) InitRoutes(router *gin.Engine) {
 		if err == nil {
 			context.JSON(200, body)
 		} else {
-			context.Error(err)
+			context.String(400, err.Error())
 		}
 	})
 
@@ -64,7 +64,7 @@ func (cpuResource CPUResource) InitRoutes(router *gin.Engine) {
 		if err == nil {
 			context.JSON(200, body)
 		} else {
-			context.Error(err)
+			context.String(400, err.Error())
 		}
 	})
 }

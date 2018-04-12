@@ -10,6 +10,8 @@
     "name" : "host"
   }, {
     "name" : "cpu"
+  },{
+    "name" : "gpu"
   }, {
     "name" : "memory"
   }, {
@@ -124,6 +126,24 @@
         "responses" : {
           "200" : {
             "description" : "cpu info"
+          },
+          "400" : {
+            "description" : "bad result"
+          }
+        }
+      }
+    },
+    "/api/gpu/info" : {
+      "get" : {
+        "tags" : [ "gpu" ],
+        "summary" : "get gpu info",
+        "description" : "get gpu info",
+        "operationId" : "getGpuInfo",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "gpu info"
           },
           "400" : {
             "description" : "bad result"

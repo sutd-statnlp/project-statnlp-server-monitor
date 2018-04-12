@@ -37,6 +37,10 @@ func setupRoutes() *gin.Engine {
 	cpuResource := resource.CPUResource{}
 	cpuResource.InitRoutes(router)
 
+	// GPU
+	gpuResource := resource.GPUResource{}
+	gpuResource.InitRoutes(router)
+
 	// Memory
 	memResource := resource.MemResource{}
 	memResource.InitRoutes(router)
