@@ -22,40 +22,32 @@ func setupRoutes() *gin.Engine {
 		context.Next()
 	})
 
-	homeController := controller.HomeController{}
-	homeController.InitRoutes(router)
+	// Home
+	controller.InitHomeRoutes(router)
 
 	// Runtime
-	runtimeResource := resource.RuntimeResource{}
-	runtimeResource.InitRoutes(router)
+	resource.InitRuntimeRoutes(router)
 
 	// Host
-	hostResource := resource.HostResource{}
-	hostResource.InitRoutes(router)
+	resource.InitHostRoutes(router)
 
 	// CPU
-	cpuResource := resource.CPUResource{}
-	cpuResource.InitRoutes(router)
+	resource.InitCPURoutes(router)
 
 	// GPU
-	gpuResource := resource.GPUResource{}
-	gpuResource.InitRoutes(router)
+	resource.InitGPURoutes(router)
 
 	// Memory
-	memResource := resource.MemResource{}
-	memResource.InitRoutes(router)
+	resource.InitMemoryRoutes(router)
 
 	// Disk
-	diskResource := resource.DiskResource{}
-	diskResource.InitRoutes(router)
+	resource.InitDiskRoutes(router)
 
 	// Load
-	loadResource := resource.LoadResource{}
-	loadResource.InitRoutes(router)
+	resource.InitLoadRoutes(router)
 
 	// Network
-	netResource := resource.NetResource{}
-	netResource.InitRoutes(router)
+	resource.InitNetRoutes(router)
 
 	return router
 }

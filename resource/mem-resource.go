@@ -6,12 +6,8 @@ import (
 	"../service"
 )
 
-// MemResource .
-type MemResource struct {
-}
-
-// InitRoutes .
-func (memResource MemResource) InitRoutes(router *gin.Engine) {
+// InitMemoryRoutes .
+func InitMemoryRoutes(router *gin.Engine) {
 	memService := service.MemService{}
 
 	router.GET("/api/mem/virtual", func(context *gin.Context) {

@@ -12,8 +12,7 @@ import (
 func TestGetAverage(t *testing.T) {
 	router := SetUpRouter()
 
-	loadResource := resource.LoadResource{}
-	loadResource.InitRoutes(router)
+	resource.InitLoadRoutes(router)
 
 	// Get load average
 	w := httptest.NewRecorder()
@@ -28,8 +27,7 @@ func TestGetAverage(t *testing.T) {
 func TestGetMisc(t *testing.T) {
 	router := SetUpRouter()
 
-	loadResource := resource.LoadResource{}
-	loadResource.InitRoutes(router)
+	resource.InitLoadRoutes(router)
 
 	// Get load misc
 	w := httptest.NewRecorder()

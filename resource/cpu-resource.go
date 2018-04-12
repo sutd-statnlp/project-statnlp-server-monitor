@@ -6,12 +6,8 @@ import (
 	"../service"
 )
 
-// CPUResource .
-type CPUResource struct {
-}
-
-// InitRoutes .
-func (cpuResource CPUResource) InitRoutes(router *gin.Engine) {
+// InitCPURoutes .
+func InitCPURoutes(router *gin.Engine) {
 	cpuService := service.CPUService{}
 
 	router.GET("/api/cpu/sum/percent", func(context *gin.Context) {

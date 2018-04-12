@@ -12,8 +12,7 @@ import (
 func TestGetNetInterfaces(t *testing.T) {
 	router := SetUpRouter()
 
-	netResource := resource.NetResource{}
-	netResource.InitRoutes(router)
+	resource.InitNetRoutes(router)
 
 	// Get net interfaces
 	w := httptest.NewRecorder()
@@ -28,8 +27,7 @@ func TestGetNetInterfaces(t *testing.T) {
 func TestGetNetConnection(t *testing.T) {
 	router := SetUpRouter()
 
-	netResource := resource.NetResource{}
-	netResource.InitRoutes(router)
+	resource.InitNetRoutes(router)
 
 	// Get net connection
 	w := httptest.NewRecorder()

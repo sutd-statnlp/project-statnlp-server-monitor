@@ -6,12 +6,8 @@ import (
 	"../service"
 )
 
-// RuntimeResource .
-type RuntimeResource struct {
-}
-
-// InitRoutes .
-func (runtimeResource RuntimeResource) InitRoutes(router *gin.Engine) {
+// InitRuntimeRoutes .
+func InitRuntimeRoutes(router *gin.Engine) {
 	runtimeService := service.RuntimeService{}
 
 	router.GET("/api/runtime/goos", func(context *gin.Context) {

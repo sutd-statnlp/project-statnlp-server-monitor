@@ -12,8 +12,7 @@ import (
 func TestGetHostInfo(t *testing.T) {
 	router := SetUpRouter()
 
-	hostResource := resource.HostResource{}
-	hostResource.InitRoutes(router)
+	resource.InitHostRoutes(router)
 
 	// Get host info
 	w := httptest.NewRecorder()
@@ -28,8 +27,7 @@ func TestGetHostInfo(t *testing.T) {
 func TestGetHostTemperture(t *testing.T) {
 	router := SetUpRouter()
 
-	hostResource := resource.HostResource{}
-	hostResource.InitRoutes(router)
+	resource.InitHostRoutes(router)
 
 	// Get host temperature
 	w := httptest.NewRecorder()

@@ -12,8 +12,7 @@ import (
 func TestGetGoOS(t *testing.T) {
 	router := SetUpRouter()
 
-	runtimeResource := resource.RuntimeResource{}
-	runtimeResource.InitRoutes(router)
+	resource.InitRuntimeRoutes(router)
 
 	// Get runtime go OS
 	w := httptest.NewRecorder()
