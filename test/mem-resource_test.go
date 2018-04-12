@@ -12,8 +12,7 @@ import (
 func TestGetVirtual(t *testing.T) {
 	router := SetUpRouter()
 
-	memResource := resource.MemResource{}
-	memResource.InitRoutes(router)
+	resource.InitMemoryRoutes(router)
 
 	// Get mem info
 	w := httptest.NewRecorder()
@@ -28,8 +27,7 @@ func TestGetVirtual(t *testing.T) {
 func TestGetSwap(t *testing.T) {
 	router := SetUpRouter()
 
-	memResource := resource.MemResource{}
-	memResource.InitRoutes(router)
+	resource.InitMemoryRoutes(router)
 
 	// Get mem swap
 	w := httptest.NewRecorder()

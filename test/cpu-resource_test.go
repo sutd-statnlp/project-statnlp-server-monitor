@@ -12,8 +12,7 @@ import (
 func TestGetCPUSumPercent(t *testing.T) {
 	router := SetUpRouter()
 
-	cpuResource := resource.CPUResource{}
-	cpuResource.InitRoutes(router)
+	resource.InitCPURoutes(router)
 
 	// Get cpu summary percent
 	w := httptest.NewRecorder()
@@ -27,8 +26,7 @@ func TestGetCPUSumPercent(t *testing.T) {
 func TestGetCPUSumTime(t *testing.T) {
 	router := SetUpRouter()
 
-	cpuResource := resource.CPUResource{}
-	cpuResource.InitRoutes(router)
+	resource.InitCPURoutes(router)
 
 	// Get cpu summary time
 	w := httptest.NewRecorder()
@@ -42,8 +40,7 @@ func TestGetCPUSumTime(t *testing.T) {
 func TestGetCPUInfo(t *testing.T) {
 	router := SetUpRouter()
 
-	cpuResource := resource.CPUResource{}
-	cpuResource.InitRoutes(router)
+	resource.InitCPURoutes(router)
 
 	// Get cpu info
 	w := httptest.NewRecorder()
@@ -57,8 +54,7 @@ func TestGetCPUInfo(t *testing.T) {
 func TestGetPercent(t *testing.T) {
 	router := SetUpRouter()
 
-	cpuResource := resource.CPUResource{}
-	cpuResource.InitRoutes(router)
+	resource.InitCPURoutes(router)
 
 	// Get cpu percent
 	w := httptest.NewRecorder()
@@ -72,8 +68,7 @@ func TestGetPercent(t *testing.T) {
 func TestGetTime(t *testing.T) {
 	router := SetUpRouter()
 
-	cpuResource := resource.CPUResource{}
-	cpuResource.InitRoutes(router)
+	resource.InitCPURoutes(router)
 
 	// Get cpu time
 	w := httptest.NewRecorder()

@@ -6,12 +6,8 @@ import (
 	"../service"
 )
 
-// NetResource .
-type NetResource struct {
-}
-
-// InitRoutes .
-func (netResource NetResource) InitRoutes(router *gin.Engine) {
+// InitNetRoutes .
+func InitNetRoutes(router *gin.Engine) {
 	netService := service.NetService{}
 
 	router.GET("/api/net/interface", func(context *gin.Context) {

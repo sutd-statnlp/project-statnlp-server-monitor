@@ -12,8 +12,7 @@ import (
 func TestGetUsage(t *testing.T) {
 	router := SetUpRouter()
 
-	diskResource := resource.DiskResource{}
-	diskResource.InitRoutes(router)
+	resource.InitDiskRoutes(router)
 
 	// Get disk usage
 	w := httptest.NewRecorder()

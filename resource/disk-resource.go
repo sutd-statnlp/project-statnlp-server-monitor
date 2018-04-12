@@ -6,12 +6,8 @@ import (
 	"../service"
 )
 
-// DiskResource .
-type DiskResource struct {
-}
-
-// InitRoutes .
-func (diskResource DiskResource) InitRoutes(router *gin.Engine) {
+// InitDiskRoutes .
+func InitDiskRoutes(router *gin.Engine) {
 	diskService := service.DiskService{}
 
 	router.GET("/api/disk/usage", func(context *gin.Context) {

@@ -6,12 +6,8 @@ import (
 	"../service"
 )
 
-// LoadResource .
-type LoadResource struct {
-}
-
-// InitRoutes .
-func (loadResource LoadResource) InitRoutes(router *gin.Engine) {
+// InitLoadRoutes .
+func InitLoadRoutes(router *gin.Engine) {
 	loadService := service.LoadService{}
 
 	router.GET("/api/load/average", func(context *gin.Context) {

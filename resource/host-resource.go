@@ -6,12 +6,8 @@ import (
 	"../service"
 )
 
-// HostResource .
-type HostResource struct {
-}
-
-// InitRoutes .
-func (hostResource HostResource) InitRoutes(router *gin.Engine) {
+// InitHostRoutes .
+func InitHostRoutes(router *gin.Engine) {
 	hostService := service.HostService{}
 
 	router.GET("/api/host/info", func(context *gin.Context) {

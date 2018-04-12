@@ -12,8 +12,7 @@ import (
 func TestIndex(t *testing.T) {
 	router := SetUpRouter()
 
-	homeController := controller.HomeController{}
-	homeController.InitRoutes(router)
+	controller.InitHomeRoutes(router)
 
 	w := httptest.NewRecorder()
 	req, _ := http.NewRequest("GET", "/", nil)

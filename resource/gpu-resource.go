@@ -7,12 +7,8 @@ import (
 	"../util"
 )
 
-// GPUResource .
-type GPUResource struct {
-}
-
-// InitRoutes .
-func (gpuResource GPUResource) InitRoutes(router *gin.Engine) {
+// InitGPURoutes .
+func InitGPURoutes(router *gin.Engine) {
 	gpuService := service.GPUService{}
 
 	router.GET("/api/gpu/info", func(context *gin.Context) {
